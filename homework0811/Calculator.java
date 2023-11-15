@@ -9,13 +9,7 @@ package org.example.homework0811;
 
 public class Calculator {
         // Решение через цикл
-        public static int sum(int n, int m) {
-            int result = 0;
-            for (int i = m; i <= n; i += m) {
-                result += i;
-            }
-            return result;
-        }
+        
 
         // Решение через рекурсию
         public static int recursiveSum(int n, int m) {
