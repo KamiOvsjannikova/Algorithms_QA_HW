@@ -1,6 +1,28 @@
 package org.example.homework1312;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
+// 1. Написать метод поиска по значению в дереве SearchTree (см. код в репозитории) согласно DFS - depth first search, обход дерева в глубину.
+//public String searchByValueDFS(Integer value) 
+
+
+public String searchByValueDFS(Integer value) { // O(n) TODO
+        if (root == null) return null;
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            Node current = stack.pop();
+            if (current.value.equals(value)) return current.key;
+            if (current.right != null) stack.push(current.right);
+            if (current.left != null) stack.push(current.left);
+        }
+        return null;
+    }
+
+//Написать метод для вычисления высоты дерева SearchTree (см. код в репозитории). 
+//Высота дерева - это длина самого длинного пути от корня дерева до конечного узла дерева. 
+//Оценить эффективность написанного метода.
+
 
 public class SearchTree {
 
